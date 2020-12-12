@@ -27,10 +27,10 @@ int main() {
 		cin >> r1 >> op >> r2;
 
 		switch (op) {
-		case '+': cout << r1 + r2; break;
-		case '-': cout << r1 - r2; break;
-		case '*': cout << r1 * r2; break;
-		case '/': cout << r1 / r1; break;
+      case '+': cout << r1 + r2; break;
+      case '-': cout << r1 - r2; break;
+      case '*': cout << r1 * r2; break;
+      case '/': cout << r1 / r2; break;
 		}
 	}
 	catch (exception& ex) {
