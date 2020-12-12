@@ -16,7 +16,26 @@ int main() {
    * Run tests or change them
    * If you see "OK" then it works perfectly, otherwise work with your code for a better result
    */
-  RATIONAL_TESTS::tests();
+  // RATIONAL_TESTS::tests();
+
+  try {
+		Rational r1;
+		Rational r2;
+
+		char op;
+
+		cin >> r1 >> op >> r2;
+
+		switch (op) {
+		case '+': cout << r1 + r2; break;
+		case '-': cout << r1 - r2; break;
+		case '*': cout << r1 * r2; break;
+		case '/': cout << r1 / r1; break;
+		}
+	}
+	catch (exception& ex) {
+		cout << ex.what() << endl;
+	}
 
   return 0;
 }
