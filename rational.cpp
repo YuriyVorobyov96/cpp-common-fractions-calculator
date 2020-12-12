@@ -15,6 +15,8 @@ Rational::Rational() {
 };
 
 Rational::Rational(int numerator, int denominator) {
+  if (denominator == 0) throw invalid_argument("The divisor cannot be 0");
+
   if (denominator < 0) {
     if (numerator < 0) { 
       denominator = abs(denominator);
@@ -69,6 +71,8 @@ Rational operator * (Rational r1, Rational r2) {
 }
 
 Rational operator / (Rational r1, Rational r2) {
+  if (r2.Numerator() == 0) throw domain_error("Cannot be divided by 0");
+
   int p = r1.Numerator() * r2.Denominator();
   int q = r1.Denominator() * r2.Numerator();
   return Rational(p, q);
