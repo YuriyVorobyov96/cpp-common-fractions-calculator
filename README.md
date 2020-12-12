@@ -4,7 +4,7 @@ How to build it w/out MS VS or smth else?
   ```bash
     g++ -c main.cpp
     g++ -c tests.cpp
-    g++ -c rational.cpp
+    g++ -c -std=c++17 rational.cpp
     g++ main.o tests.o rational.o -o my_program_cool_name
   ```
 - Then open "my_program_cool_name".
